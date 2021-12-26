@@ -11,15 +11,15 @@ app = Flask(__name__)
 file = open("Heart/heart_model.pkl", "rb")
 model = pickle.load(file)
 
-file_diabetes = open("Diabetes\diabetes_model.pkl", "rb")
+file_diabetes = open("Diabetes/diabetes_model.pkl", "rb")
 model_diabetes = pickle.load(file_diabetes)
-diabetes_df = pd.read_csv('Diabetes\Diabetes.csv')
+diabetes_df = pd.read_csv('Diabetes/Diabetes.csv')
 diabetes_X = diabetes_df.drop(columns='Outcome', axis=1)
 diabetes_Y = diabetes_df['Outcome']
 
-file_parkinson = open("Parkinson\parkinsons_model.pkl", "rb")
+file_parkinson = open("Parkinson/parkinsons_model.pkl", "rb")
 model_parkinson = pickle.load(file_parkinson)
-parkinsons_df = pd.read_csv('Parkinson\parkinsons.csv')
+parkinsons_df = pd.read_csv('Parkinson/parkinsons.csv')
 parkinsons_X = parkinsons_df.drop(columns=['name', 'status'], axis=1)
 parkinsons_Y = parkinsons_df['status']
 
