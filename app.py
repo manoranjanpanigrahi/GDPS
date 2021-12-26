@@ -67,7 +67,7 @@ def heartpredict():
     else:
         return render_template("heartpredict.html", prediction="You don't seem to have a heart disease, but still take care of your heart and do regular check-ups.")
 
-@app.route('/diabetespredict', methods=['POST', 'GET'])
+@app.route('/diabetespredict', methods=['POST'])
 def diabetespredict():
     float_features = [float(y) for y in request.form.values()]
 
@@ -89,7 +89,7 @@ def diabetespredict():
     else:
         return render_template("diabetespredict.html", prediction="You don't seem to have Diabetes, but still take care of your health and do regular check-ups.")
 
-@app.route('/parkinsonpredict', methods=['POST', 'GET'])
+@app.route('/parkinsonpredict', methods=['POST'])
 def parkinsonpredict():
     a = 0
     float_features = [float(a) for a in request.form.values()]
