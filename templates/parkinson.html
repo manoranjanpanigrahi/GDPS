@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="/static/css/parkinson.css">
+   <link rel="stylesheet" href="/static/css/header.css">
+   <title>Parkinson Disease Prediction</title>
+</head>
+<body>
+   <section class="hero">
+      <div class="top-bar">
+         <h3>For all the reliable covid resources
+            <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019" target="__blank"> click here</a>
+         </h3>
+      </div>
+      <header>
+         <ul class="nav-bar">
+            <a href="index.html" class="home">Home</a>
+            <a href="heart.html" class="heart">Heart</a>
+            <a href="diabetes.html" class="diabetes">Diabetes</a>
+            <a href="parkinson.html" class="parkinson current">Parkinson</a>
+            <a href="about.html" class="about">About</a>
+            <a href="documentaion.html" class="contact">Documentation</a>
+         </ul>
+      </header>
+   </section>
+   <h3 class="notice"><strong>Note: </strong>Fill in all the data very accurately referring to your test reports
+      for accurate results. Dont't provide any units value like dB, %, Abs etc. Just the numeric value.</h3>
+   <section class="form-section">
+      <div class="container">
+         <form action="/parkinsonpredict" method="POST" class="form">
+            <!--submits to predict page in a POST method-->
+            <div class="step step-1 active">
+               <div class="form-group MDVP:Fo(Hz)">
+                  <label for="MDVP:Fo(Hz)">MDVP:Fo(Hz)</label>
+                  <p
+                class="tooltip-btn"
+                data-tooltip="Average vocal fundamental frequency"
+              >
+                ?
+              </p>
+                  <input type="text" name="MDVP:Fo(Hz)" required>
+               </div>
+               <div class="form-group MDVP:Fhi(Hz)">
+                  <label for="MDVP:Fhi(Hz)">MDVP:Fhi(Hz)</label>
+                  <p
+                class="tooltip-btn"
+                data-tooltip="Maximum vocal fundamental frequency"
+              >
+                ?
+              </p>
+                  <input type="text" name="MDVP:Fhi(Hz)" required>
+               </div>
+               <div class="form-group MDVP:Flo(Hz)">
+                  <label for="MDVP:Flo(Hz)">MDVP:Flo(Hz)</label>
+                  <p
+                class="tooltip-btn"
+                data-tooltip="Minimum vocal fundamental frequency"
+              >
+                ?
+              </p>
+                  <input type="text" name="MDVP:Flo(Hz)" required>
+               </div>
+               <div class="form-group MDVP:Jitter(%)">
+                  <label for="MDVP:Jitter(%)">MDVP:Jitter(%)</label>
+                  <p
+                class="tooltip-btn"
+                data-tooltip="MDVP jitter in percentage"
+              >
+                ?
+              </p>
+                  <input type="text" name="MDVP:Jitter(%)" required>
+               </div>
+               <div class="form-group MDVP:Jitter(Abs)">
+                  <label for="MDVP:Jitter(Abs)">MDVP:Jitter(Abs)</label>
+                  <p
+                class="tooltip-btn"
+                data-tooltip="MDVP absolute jitter in ms"
+              >
+                ?
+              </p>
+                  <input type="text" name="MDVP:Jitter(Abs)" required>
+               </div>
+               <div class="form-group MDVP:RAP">
+                  <label for="MDVP:RAP">MDVP:RAP</label>
+                  <p
+                class="tooltip-btn"
+                data-tooltip="MDVP relative amplitude perturbation"
+              >
+                ?
+              </p>
+                  <input type="text" name="MDVP:RAP" required>
+               </div>
+               <div class="buttons">
+                  <button type="reset" class="reset-btn">Reset</button>
+                  <button type="button" class="next-btn">Next</button>
+               </div>
+            </div>
+            <div class="step step-2">
+               <div class="form-group MDVP:PPQ">
+                  <label for="MDVP:PPQ">MDVP:PPQ</label>
+                  <p
+                class="tooltip-btn"
+                data-tooltip="MDVP five-point period perturbation quotient"
+              >
+                ?
+              </p>
+                  <input type="text" name="MDVP:PPQ" required>
+               </div>
+               <div class="form-group Jitter:DDP">
+                  <label for="Jitter:DDP">Jitter:DDP</label>
+                  <p
+                class="tooltip-btn"
+                data-tooltip="Average absolute difference of differences between jitter cycles"
+              >
+                ?
+              </p>
+                  <input type="text" name="Jitter:DDP" required>
+               </div>
+               <div class="form-group MDVP:Shimmer">
+                  <label for="MDVP:Shimmer">MDVP:Shimmer</label>
+                  <p
+                class="tooltip-btn"
+                data-tooltip="MDVP local shimmer"
+              >
+                ?
+              </p>
+                  <input type="text" name="MDVP:Shimmer" required>
+               </div>
+               <div class="form-group MDVP:Shimmer(dB)">
+                  <label for="MDVP:Shimmer(dB)">MDVP:Shimmer(dB)</label>
+                  <p
+                class="tooltip-btn"
+                data-tooltip="MDVP local shimmer in dB"
+              >
+                ?
+              </p>
+                  <input type="text" name="MDVP:Shimmer(dB)" required>
+               </div>
+               <div class="form-group Shimmer:APQ3">
+                  <label for="Shimmer:APQ3">Shimmer:APQ3</label>
+                  <p
+                class="tooltip-btn"
+                data-tooltip="Three-point amplitude perturbation quotient"
+              >
+                ?
+              </p>
+                  <input type="text" name="Shimmer:APQ3" required>
+               </div>
+               <div class="form-group Shimmer:APQ5">
+                  <label for="Shimmer:APQ5">Shimmer:APQ5</label>
+                  <p
+                class="tooltip-btn"
+                data-tooltip="Five-point amplitude perturbation quotient"
+              >
+                ?
+              </p>
+                  <input type="text" name="Shimmer:APQ5" required>
+               </div>
+               <div class="buttons">
+                  <button type="button" class="prev-btn">Previous</button>
+                  <button type="reset" class="reset-btn">Reset</button>
+                  <button type="button" class="next-btn">Next</button>
+               </div>
+            </div>
+            <div class="step step-3">
+               <div class="form-group MDVP:APQ">
+                  <label for="dpf">MDVP:APQ</label>
+                  <p
+                class="tooltip-btn"
+                data-tooltip="MDVP 11-point amplitude perturbation quotient"
+              >
+                ?
+              </p>
+                  <input type="text" name="MDVP:APQ" required>
+               </div>
+               <div class="form-group Shimmer:DDA">
+                  <label for="age">Shimmer:DDA</label>
+                  <p
+                class="tooltip-btn"
+                data-tooltip="Average absolute differences between the amplitudes of consecutive periods"
+              >
+                ?
+              </p>
+                  <input type="text" name="Shimmer:DDA" required>
+               </div>
+               <div class="form-group NHR">
+                  <label for="NHR">NHR</label>
+                  <p
+                class="tooltip-btn"
+                data-tooltip="Noise-to-harmonics ratio"
+              >
+                ?
+              </p>
+                  <input type="text" name="NHR" required>
+               </div>
+               <div class="form-group HNR">
+                  <label for="age">HNR</label>
+                  <p
+                class="tooltip-btn"
+                data-tooltip="Harmonics-to-noise ratio"
+              >
+                ?
+              </p>
+                  <input type="HNR" name="HNR" required>
+               </div>
+               <div class="form-group rpde">
+                  <label for="dpf">RPDE</label>
+                  <p
+                class="tooltip-btn"
+                data-tooltip="Recurrence period density entropy measure"
+              >
+                ?
+              </p>
+                  <input type="text" name="RPDE" required>
+               </div>
+               <div class="form-group dfa">
+                  <label for="age">DFA</label>
+                  <p
+                class="tooltip-btn"
+                data-tooltip="Signal fractal scaling exponent of detrended fluctuation analysis"
+              >
+                ?
+              </p>
+                  <input type="text" name="DFA" required>
+               </div>
+               <div class="buttons">
+                  <button type="button" class="prev-btn">Previous</button>
+                  <button type="reset" class="reset-btn">Reset</button>
+                  <button type="button" class="next-btn">Next</button>
+               </div>
+            </div>
+            <div class="step step-3">
+               <div class="form-group spread1">
+                  <label for="dpf">spread1</label>
+                  <p
+                class="tooltip-btn"
+                data-tooltip="Two nonlinear measures of fundamental"
+              >
+                ?
+              </p>
+                  <input type="text" name="spread1" required>
+               </div>
+               <div class="form-group spread2">
+                  <label for="age">spread2</label>
+                  <p
+                class="tooltip-btn"
+                data-tooltip="Frequency variation"
+              >
+                ?
+              </p>
+                  <input type="text" name="spread2" required>
+               </div>
+               <div class="form-group d2">
+                  <label for="dpf">D2</label>
+                  <p
+                class="tooltip-btn"
+                data-tooltip="Correlation dimension"
+              >
+                ?
+              </p>
+                  <input type="text" name="D2" required>
+               </div>
+               <div class="form-group ppe">
+                  <label for="age">PPE</label>
+                  <p
+                class="tooltip-btn"
+                data-tooltip="Pitch period entropy"
+              >
+                ?
+              </p>
+                  <input type="text" name="PPE" required>
+               </div>
+               <div class="buttons">
+                  <button type="button" class="prev-btn">Previous</button>
+                  <button type="reset" class="reset-btn">Reset</button>
+                  <button type="submit" class="submit-btn">Submit</button>
+               </div>
+            </div>
+         </form>
+      </div>
+   </section>
+   <script src="static\script.js"></script>
+</body>
+</html>

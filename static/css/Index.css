@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+/****************************************** HERO SECTION ****************************************/
+.welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 0 0;
+}
+.hero h1 {
+  font-size: 3.2rem;
+  opacity: 0.8;
+  font-weight: 300;
+  letter-spacing: 6px;
+  width: 45ch;
+  animation: typing 6s steps(45) infinite alternate,
+    blink 0.4s infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.hero {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+}
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}
+.slider > img {
+  width: 100%;
+  height: 100vh;
+  animation: fade-in 3s infinite;
+}
+@keyframes fade-in {
+   from{opacity: 0;}
+   to{opacity: 1;}
+}

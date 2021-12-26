@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/heart.css" />
+    <link rel="stylesheet" href="/static/css/header.css" />
+    <title>Heart Disease Prediction</title>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="top-bar">
+        <h3>
+          For all the reliable covid resources
+          <a
+            href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019"
+            target="__blank"
+          >
+            click here</a
+          >
+        </h3>
+      </div>
+      <header>
+        <ul class="nav-bar">
+          <a href="index.html" class="home ">Home</a>
+          <a href="heart.html" class="heart current">Heart</a>
+          <a href="diabetes.html" class="diabetes">Diabetes</a>
+          <a href="parkinson.html" class="parkinson">Parkinson</a>
+          <a href="about.html" class="about">About</a>
+          <a href="documentaion.html" class="contact">Documentation</a>
+        </ul>
+      </header>
+    </section>
+
+    <h3 class="notice">
+      <strong>Note: </strong>Fill in all the data very accurately referring to your test reports
+      for accurate results. Dont't provide any units value like mg/dL, mmHg etc. Just the numeric value.
+    </h3>
+
+    <section class="form-section">
+      <div class="container">
+        <form action="/heartpredict" method="post" class="form">
+          <!--submits to predict page in a POST method-->
+          <div class="step step-1 active">
+            <div class="form-group age">
+              <label for="age">age</label>
+              <p
+                class="tooltip-btn"
+                data-tooltip="Age is a big risk factor. The older you are, the more likely you are to have it."
+              >
+                ?
+              </p>
+              <input type="text" name="age" required />
+            </div>
+            <div class="form-group sex">
+              <label for="sex">sex</label>
+              <p
+                class="tooltip-btn"
+                data-tooltip="Enter the value 1 = male, 0 = female"
+              >
+                ?
+              </p>
+              <input type="text" name="sex" required />
+            </div>
+            <div class="form-group cp">
+              <label
+                for="cp"
+                
+                >Chest pain</label
+              >
+              <p
+                class="tooltip-btn"
+                data-tooltip="Chest Pain 0= Typical Angina, 1= Atypical, 2= Non-angina, 3= Asymptomatic"
+              >
+                ?
+              </p>
+              <input type="text" name="cp" required />
+            </div>
+            <div class="form-group trestbps">
+              <label
+                for="trestbps"
+                
+                >resting blood pressure</label
+              >
+              <p
+                class="tooltip-btn"
+                data-tooltip="resting blood pressure in mmHg.Ideal = 90/60mmHg and 120/80mmHg,High = 140/90mmHg or higher,Low = 90/60mmHg or lower"
+              >
+                ?
+              </p>
+              <input type="text" name="trestbps" required />
+            </div>
+            <div class="form-group chol">
+              <label
+                for="choles"
+                
+                >cholesterol</label
+              >
+              <p
+                class="tooltip-btn"
+                data-tooltip="serum cholesterol in mg/dL Desirable= Less than 200, Borderline High= 200 - 239, High= 240 and above"
+              >
+                ?
+              </p>
+              <input type="text" name="chol" required />
+            </div>
+            <div class="buttons">
+              <button type="reset" class="reset-btn">Reset</button>
+              <button type="button" class="next-btn">Next</button>
+            </div>
+          </div>
+          <div class="step step-2">
+            <div class="form-group fbs">
+              <label
+                for="fbs"
+                
+                >fasting blood sugar</label
+              >
+              <p
+                class="tooltip-btn"
+                data-tooltip="fasting blood sugar > 120 mg/dL (likely to be diabetic) 1 = true, 0 = false"
+              >
+                ?
+              </p>
+              <input type="text" name="fbs" required />
+            </div>
+            <div class="form-group restecg">
+              <label
+                for="restecg"
+                
+                >resting electrocardiogram result</label
+              >
+              <p
+                class="tooltip-btn"
+                data-tooltip="resting electrocardiogram result 0= normal, 1=having ST-T wave abnormality (elevation or depression of > 0.05 mV), 2= showing probable or definite left ventricular hypertrophy by Estes' criteria"
+              >
+                ?
+              </p>
+              <input type="text" name="restecg" required />
+            </div>
+            <div class="form-group thalach">
+              <label for="thalach" 
+                >maximum heart rate</label
+              >
+              <p
+                class="tooltip-btn"
+                data-tooltip="maximum heart rate achieved"
+              >
+                ?
+              </p>
+              <input type="text" name="thalach" required />
+            </div>
+            <div class="form-group exang">
+              <label
+                for="exang"
+                
+                >exercise induced angina</label
+              >
+              <p
+                class="tooltip-btn"
+                data-tooltip="exercise induced angina (1 = yes, 0 = no)"
+              >
+                ?
+              </p>
+              <input type="text" name="exang" required />
+            </div>
+            <div class="form-group oldpeak">
+              <label for="oldpeak">exercise relative to rest</label>
+              <p
+                class="tooltip-btn"
+                data-tooltip="ST depression induced by exercise relative to rest in mm, achieved by subtracting the lowest ST segment points during exercise and rest"
+              >
+                ?
+              </p>
+              <input type="text" name="oldpeak" required />
+            </div>
+            <div class="buttons">
+              <button type="button" class="prev-btn">Previous</button>
+              <button type="button" class="next-btn">Next</button>
+            </div>
+          </div>
+
+          <div class="step step-3">
+            <div class="form-group slope">
+              <label for="slope">slope of the peak exercise</label>
+              <p
+                class="tooltip-btn"
+                data-tooltip="the slope of the peak exercise ST segment"
+              >
+                ?
+              </p>
+              <input type="text" name="slope" required />
+            </div>
+
+            <div class="form-group ca">
+              <label for="ca">coronary arteries number</label>
+              <p
+                class="tooltip-btn"
+                data-tooltip="coronary arteries. number of major vessels (0-3) colored by fluoroscopy"
+              >
+                ?
+              </p>
+              <input type="text" name="ca" required />
+            </div>
+
+            <div class="form-group thal">
+              <label for="thal">thalassemia</label>
+              <p class="tooltip-btn" data-tooltip="thalassemia">?</p>
+              <input type="text" name="thal" required />
+            </div>
+
+            <div class="buttons">
+              <button type="button" class="prev-btn">Previous</button>
+              <button type="reset" class="reset-btn">Reset</button>
+              <button type="submit" class="submit-btn">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <script src="static\script.js"></script>
+  </body>
+</html>

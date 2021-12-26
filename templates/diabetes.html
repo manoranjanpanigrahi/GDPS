@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/diabetes.css" />
+    <link rel="stylesheet" href="/static/css/header.css" />
+    <title>Diabetes Prediction</title>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="top-bar">
+        <h3>
+          For all the reliable covid resources
+          <a
+            href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019"
+            target="__blank"
+          >
+            click here</a
+          >
+        </h3>
+      </div>
+      <header>
+        <ul class="nav-bar">
+          <a href="index.html" class="home">Home</a>
+          <a href="heart.html" class="heart">Heart</a>
+          <a href="diabetes.html" class="diabetes current">Diabetes</a>
+          <a href="parkinson.html" class="parkinson">Parkinson</a>
+          <a href="about.html" class="about">About</a>
+          <a href="documentaion.html" class="contact">Documentation</a>
+        </ul>
+      </header>
+    </section>
+    <h3 class="notice">
+      <strong>Note: </strong>Fill in all the data very accurately referring to your test reports
+      for accurate results. Dont't provide any units value like mIU/L, mm, Kg etc. Just the numeric value.
+    </h3>
+    <section class="form-section">
+      <div class="container">
+        <form action="/diabetespredict" method="post" class="form">
+          <!--submits to predict page in a POST method-->
+          <div class="step step-1 active">
+            <div class="form-group pregnencies">
+              <label for="pregnencies">pregnencies</label>
+              <p
+                class="tooltip-btn"
+                data-tooltip="Number of times pregnency has occured"
+              >
+                ?
+              </p>
+              <input type="text" name="pregnencies" required />
+            </div>
+            <div class="form-group glucose">
+              <label for="glucose">glucose</label>
+              <p
+                class="tooltip-btn"
+                data-tooltip="fasting and after eating test value"
+              >
+                ?
+              </p>
+              <input type="text" name="glucose" required />
+            </div>
+            <div class="form-group bloodpressure">
+              <label
+                for="bloodpressure"
+                
+                >Blood Pressure</label
+              >
+              <p
+                class="tooltip-btn"
+                data-tooltip="resting Blood Pressure value"
+              >
+                ?
+              </p>
+              <input type="text" name="bloodpressure" required />
+            </div>
+            <div class="form-group skinthickness">
+              <label
+                for="skinthickness"
+                
+                >Skin Thickness</label
+              >
+              <p
+                class="tooltip-btn"
+                data-tooltip="A value used to estimate body fat, measured on the right arm. Normal thickness in males is 12 mm and in females 23 mm"
+              >
+                ?
+              </p>
+              <input type="text" name="skinthickness" required />
+            </div>
+            <div class="buttons">
+              <button type="reset" class="reset-btn">Reset</button>
+              <button type="button" class="next-btn">Next</button>
+            </div>
+          </div>
+          <div class="step step-2">
+            <div class="form-group insulin">
+              <label
+                for="insulin"
+                
+                >Insulin</label
+              >
+              <p
+                class="tooltip-btn"
+                data-tooltip="tested 2 hour after glucose administration.Normal(16-166 mIU/L)"
+              >
+                ?
+              </p>
+              <input type="text" name="insulin" required />
+            </div>
+            <div class="form-group bmi">
+              <label
+                for="bmi"
+                >BMI</label
+              >
+              <p
+                class="tooltip-btn"
+                data-tooltip="Body mass index (weight in kg/(height in m)^2).Normal: 18.5 to 24.9 "
+              >
+                ?
+              </p>
+              <input type="text" name="bmi" required />
+            </div>
+            <div class="form-group dpf">
+              <label
+                for="dpf"
+                
+                >Diabetes Pedigree Function</label
+              >
+              <p
+                class="tooltip-btn"
+                data-tooltip="Diabetes pedigree function (a function which scores likelihood of diabetes based on family history)."
+              >
+                ?
+              </p>
+              <input type="text" name="dpf" required />
+            </div>
+            <div class="form-group age">
+              <label
+                for="diabetesage"
+                
+                >age</label
+              >
+              <p
+                class="tooltip-btn"
+                data-tooltip="Age is a big risk factor. The older you are, the more likely you are to have it."
+              >
+                ?
+              </p>
+              <input type="text" name="diabetesage" required />
+            </div>
+            <div class="buttons">
+              <button type="button" class="prev-btn">Previous</button>
+              <button type="reset" class="reset-btn">Reset</button>
+              <button type="submit" class="submit-btn">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <script src="static\script.js"></script>
+  </body>
+</html>

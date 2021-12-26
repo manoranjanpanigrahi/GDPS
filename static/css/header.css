@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap');
+/**************************************** NAVIGATION BAR**********************************/
+.nav-bar {
+  display: flex;
+  justify-content: space-around;
+}
+.nav-bar a {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  text-decoration: none;
+  color: black;
+  font-size: 23.5px;
+  position: relative;
+  z-index: 2;
+  letter-spacing: 2px;
+}
+.nav-bar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.25em;
+  height: 2px;
+  width: 0;
+  background-color: black;
+  transition: 0.5s;
+}
+.nav-bar a:hover::after,.nav-bar .current::after{
+  width: 100%;
+}
+/******************************** TOP BAR ************************************/
+.top-bar{
+  height: 30px;
+  width: 100vw;
+  overflow: hidden;
+}
+.top-bar h3{
+  width: 450px;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  font-size: 14px;
+  padding: 5px 0px;
+  animation: movement 22s linear infinite;
+}
+@keyframes movement {
+  from{
+    transform: translateX(-450px);
+  }
+  to{
+    transform: translateX(1350px);
+  }
+}
+.top-bar  h3:hover{
+  animation-play-state: paused;
+}
+.top-bar h3 a {
+  text-decoration: none;
+  color: black;
+  
+}

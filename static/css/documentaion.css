@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap');
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: 'Open Sans', sans-serif;
+   overflow-x: hidden;
+}
+body{
+   background-color: #c4fcefa2;
+}
+/************************************* PROBLEM STATEMENT ************************/
+.main-content{
+   margin: 15px 30px;
+   letter-spacing: 1px;
+}
+.problem-statement > p{
+   text-align: center;
+   margin: 10px 0px;
+}
+p{
+   font-size: 1.15rem;
+}
+h2{
+   font-size: 1.85rem;
+   text-align: center;
+   margin: 40px;
+   margin-bottom: 0px;
+}
+.projDoc{
+   margin-left: 48px;
+}
+/******************************* TECHNOLOGIES USED ********************************/
+.technologies{
+   margin-top: 20px;
+}
+.technologies > ul{
+   padding-left: 20px;
+   margin-top: 20px;
+   list-style: none;
+   text-align: center;
+}
+.technologies > ul > li{
+   font-weight: 600;
+   font-size: 1.15rem;
+}
+.technologies > ul > li > span{
+   font-weight: normal;
+}
+/******************************* DOCUMENTATION ************************************/
+.pdf{
+   height: 100vh;
+   width: 80%;
+   border-radius: 1%;
+   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.documentation{
+   display: flex;
+   justify-content: center;
+   margin: 20px 0px;
+}

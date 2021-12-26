@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+body {
+  overflow-x: hidden;
+  background-color: #c4fcefa2;
+}
+.main-content {
+  margin: 0px 10px 0px 20px;
+}
+.main-content > p {
+  text-align: center;
+  margin-top: 30px;
+}
+.main-content > h2 {
+  font-size: 1.95rem;
+  margin: 20px 0px;
+  text-align: center;
+}
+/************************************ TEAM MEMBERS **************************/
+.team-members {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+img {
+  /* height: 300px; */
+  height: 320px;
+  width: 250px;
+}
+.card {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  align-self: center;
+  justify-self: center;
+}
+.team-members .card img {
+  border-radius: 20px;
+}
+.img-wrapper {
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+.role {
+  padding: 10px;
+}
+.role > p {
+  font-size: 1rem;
+  letter-spacing: 0;
+}
+/******************************* PROJECT TIMELINE ****************************/
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0px;
+}
+.timeline {
+  width: 70vw;
+  position: relative;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+}
+.timeline ul {
+  list-style: none;
+}
+.timeline ul li {
+  background-color: rgba(128, 128, 128, 0.3);
+  padding: 15px;
+  margin-bottom: 20px;
+  width: 50%;
+}
+.timeline ul li:last-child {
+  margin-bottom: 0px;
+}
+.timeline ul li:nth-child(odd) {
+  float: left;
+  clear: right;
+  transform: translateX(-20px);
+  border-radius: 25px 0px 25px 25px;
+}
+.timeline ul li:nth-child(even) {
+  float: right;
+  clear: left;
+  transform: translateX(20px);
+  border-radius: 0px 25px 25px 25px;
+}
+.timeline ul li:after {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-color: rgb(207, 205, 205);
+  border-radius: 50%;
+  top: 0;
+}
+.timeline ul li:hover::after {
+  background-color: aqua;
+}
+.timeline ul li:nth-child(odd)::after {
+  transform: translate(50%, -50%);
+  right: -20px;
+}
+.timeline ul li:nth-child(even)::after {
+  transform: translate(-50%, -50%);
+  left: -20px;
+}
+.timeline-content .date {
+  position: absolute;
+  top: -30px;
+}
+.timeline-content h2 {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
