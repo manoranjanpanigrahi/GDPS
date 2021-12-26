@@ -7,9 +7,8 @@ import pandas as pd
 
 # instantiating the class Flask with app obj, name = current module (app in this case)
 app = Flask(__name__)
-
 # opening the heart pickle file that contains the trained LR model and saving it in model var
-file = open("Heart\heart_model.pkl", "rb")
+file = open("\Heart\heart_model.pkl", "rb")
 model = pickle.load(file)
 
 file_diabetes = open("Diabetes\diabetes_model.pkl", "rb")
