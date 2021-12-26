@@ -53,7 +53,7 @@ def about():
 def contact():
     return render_template("documentaion.html")
 
-@app.route('/heartpredict', methods=['POST', 'GET'])
+@app.route('/heartpredict', methods=['POST'])
 def heartpredict():
     float_features = [float(x) for x in request.form.values()]
 
