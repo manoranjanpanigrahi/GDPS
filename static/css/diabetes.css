@@ -7,7 +7,7 @@
 }
 body {
   position: relative;
-  background-color: #c4fcefe3;
+  background-color: rgba(0, 255, 255, 0.4);
 }
 
 .notice{
@@ -47,7 +47,7 @@ body {
   width: 100%;
 }
 .form-group label {
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 .form-group input {
   width: 100px;
@@ -59,7 +59,7 @@ body {
   border-radius: 10px;
   border: 1px solid gray;
 }
-button {
+.btn {
   margin: 15px 10px 10px 10px;
   padding: 10px 20px;
   font-size: 20px;
@@ -145,4 +145,49 @@ button {
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
+}
+/*********************************************** MOBILE RESPONSIVE *************************************************/
+
+@media only screen and (max-width: 768px) {
+  body {
+    height: 100%;
+  }
+  .notice {
+    margin: 0.8rem 0.5rem;
+    margin-bottom: 0;
+  }
+  .container {
+    width: fit-content;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    font-size: 17px;
+    border-radius: 25px;
+  }
+  .tooltip-btn {
+    left: 0;
+  }
+  .tooltip-btn::after {
+    left: 0;
+    bottom: 0;
+    padding: 0;
+    padding-bottom: 1rem;
+    position: fixed;
+  }
+  .textContainer{
+    text-align: center;
+    height: max-content;
+    width: fit-content;
+    margin: 0rem 0.5rem;
+  }
+  .back-button{
+    margin-top: -5rem;
+  }
+  .btn{
+    margin: 0.5rem;
+    font-size: 18px;
+    padding: 8px 16px;
+  }
+  .age{
+    padding-top: 40px;
+  }
 }

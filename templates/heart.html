@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/static/css/heart.css" />
     <link rel="stylesheet" href="/static/css/header.css" />
+    <script src="https://kit.fontawesome.com/5626601018.js" crossorigin="anonymous"></script>
     <title>Heart Disease Prediction</title>
   </head>
   <body>
@@ -21,8 +22,11 @@
           >
         </h3>
       </div>
-      <header>
-        <ul class="nav-bar">
+      <header id="header">
+        <button class="menu" id="menu">
+            <i class="fa-solid fa-bars"></i>
+         </button>
+        <ul class="nav-bar" id="nav-bar">
           <a href="index.html" class="home ">Home</a>
           <a href="heart.html" class="heart current">Heart</a>
           <a href="diabetes.html" class="diabetes">Diabetes</a>
@@ -51,7 +55,7 @@
               >
                 ?
               </p>
-              <input type="text" name="age" required />
+              <input type="number" name="age" required />
             </div>
             <div class="form-group sex">
               <label for="sex">sex</label>
@@ -61,7 +65,7 @@
               >
                 ?
               </p>
-              <input type="text" name="sex" required />
+              <input type="number" name="sex" required />
             </div>
             <div class="form-group cp">
               <label
@@ -75,7 +79,7 @@
               >
                 ?
               </p>
-              <input type="text" name="cp" required />
+              <input type="number" name="cp" required />
             </div>
             <div class="form-group trestbps">
               <label
@@ -89,7 +93,7 @@
               >
                 ?
               </p>
-              <input type="text" name="trestbps" required />
+              <input type="number" name="trestbps" required />
             </div>
             <div class="form-group chol">
               <label
@@ -103,11 +107,11 @@
               >
                 ?
               </p>
-              <input type="text" name="chol" required />
+              <input type="number" name="chol" required />
             </div>
             <div class="buttons">
-              <button type="reset" class="reset-btn">Reset</button>
-              <button type="button" class="next-btn">Next</button>
+              <button type="reset" class="reset-btn btn">Reset</button>
+              <button type="button" class="next-btn btn">Next</button>
             </div>
           </div>
           <div class="step step-2">
@@ -123,7 +127,7 @@
               >
                 ?
               </p>
-              <input type="text" name="fbs" required />
+              <input type="number" name="fbs" required />
             </div>
             <div class="form-group restecg">
               <label
@@ -137,7 +141,7 @@
               >
                 ?
               </p>
-              <input type="text" name="restecg" required />
+              <input type="number" name="restecg" required />
             </div>
             <div class="form-group thalach">
               <label for="thalach" 
@@ -149,7 +153,7 @@
               >
                 ?
               </p>
-              <input type="text" name="thalach" required />
+              <input type="number" name="thalach" required />
             </div>
             <div class="form-group exang">
               <label
@@ -163,7 +167,7 @@
               >
                 ?
               </p>
-              <input type="text" name="exang" required />
+              <input type="number" name="exang" required />
             </div>
             <div class="form-group oldpeak">
               <label for="oldpeak">exercise relative to rest</label>
@@ -173,11 +177,11 @@
               >
                 ?
               </p>
-              <input type="text" name="oldpeak" required />
+              <input type="number" name="oldpeak" required />
             </div>
             <div class="buttons">
-              <button type="button" class="prev-btn">Previous</button>
-              <button type="button" class="next-btn">Next</button>
+              <button type="button" class="prev-btn btn">Previous</button>
+              <button type="button" class="next-btn btn">Next</button>
             </div>
           </div>
 
@@ -190,7 +194,7 @@
               >
                 ?
               </p>
-              <input type="text" name="slope" required />
+              <input type="number" name="slope" required />
             </div>
 
             <div class="form-group ca">
@@ -201,24 +205,25 @@
               >
                 ?
               </p>
-              <input type="text" name="ca" required />
+              <input type="number" name="ca" required />
             </div>
 
             <div class="form-group thal">
               <label for="thal">thalassemia</label>
               <p class="tooltip-btn" data-tooltip="thalassemia">?</p>
-              <input type="text" name="thal" required />
+              <input type="number" name="thal" required />
             </div>
 
             <div class="buttons">
-              <button type="button" class="prev-btn">Previous</button>
-              <button type="reset" class="reset-btn">Reset</button>
-              <button type="submit" class="submit-btn">Submit</button>
+              <button type="button" class="prev-btn btn">Previous</button>
+              <button type="reset" class="reset-btn btn">Reset</button>
+              <button type="submit" class="submit-btn btn">Submit</button>
             </div>
           </div>
         </form>
       </div>
     </section>
-    <script src="static\script.js"></script>
+    <script src="/static/menu.js"></script>
+    <script src="/static/script.js"></script>
   </body>
 </html>

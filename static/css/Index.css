@@ -4,15 +4,23 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
+  overflow: hidden;
+}
+body{
+  background-color: rgba(0, 255, 255, 0.4);
 }
 /****************************************** HERO SECTION ****************************************/
 .welcome {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 0 0 0;
+  margin: 200px 0 0 0;
 }
-.hero h1 {
+.mobile-heading,
+.mobile-text{
+  display: none;
+}
+.welcome h1 {
   font-size: 3.2rem;
   opacity: 0.8;
   font-weight: 300;
@@ -37,22 +45,78 @@
 
 .hero {
   overflow: hidden;
-  position: relative;
+  /* position: relative; */
   width: 100%;
-  height: 100vh;
-  z-index: 1;
+  height: 100%;
 }
 .slider {
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  z-index: -1;
 }
-.slider > img {
+/* .slider > img {
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  opacity: 0.95;
+  background-size: cover;
   animation: fade-in 3s infinite;
+} */
+.banner{
+  display: block;
+  /* margin-left: auto;
+  margin-right: auto; */
+  width: 60rem;
+  margin: 5rem auto 0;
+  /* height: 30rem !important; */
+  /* position: relative; */
 }
 @keyframes fade-in {
-   from{opacity: 0;}
-   to{opacity: 1;}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*********************************************** MOBILE RESPONSIVE *************************************************/
+@media only screen and (max-width: 768px) {
+  /* .slider > img {
+    height: auto;
+  } */
+  
+  .mobile-heading{
+    display: inline;
+    margin-top: -20rem;
+    text-align: center;
+    z-index: 0;
+    position: absolute;
+  }
+  .welcome h1 {
+    display: none;
+    /* margin: 0; */
+  }
+  .mobile-text{
+    display: block;
+    margin-top: 12rem;
+    text-align: center;
+  }
+  .mobile-text > button{
+    padding: 0.5rem 0.8rem;
+    border: none;
+    border-radius: 20px;
+    background-color: #f9f971e8;
+    font-size: 1.25rem;
+    cursor: pointer;
+  }
+  .slider {
+    height: fit-content;
+  }
+  
+  .banner{
+    width: 100%;
+    margin: 10rem auto;
+  }
+  
 }

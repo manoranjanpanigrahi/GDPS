@@ -6,8 +6,10 @@
   font-family: "Open Sans", sans-serif;
 }
 body {
+  height: 100%;
+  width: 100%;
   overflow-x: hidden;
-  background-color: #c4fcefa2;
+  background-color: rgba(0, 255, 255, 0.4);
 }
 .main-content {
   margin: 0px 10px 0px 20px;
@@ -18,7 +20,7 @@ body {
 }
 .main-content > h2 {
   font-size: 1.95rem;
-  margin: 20px 0px;
+  margin: 20px 0px 0px;
   text-align: center;
 }
 /************************************ TEAM MEMBERS **************************/
@@ -122,4 +124,24 @@ img {
 .timeline-content h2 {
   font-weight: 500;
   margin-bottom: 10px;
+}
+/*********************************************** MOBILE RESPONSIVE *************************************************/
+
+@media only screen and (max-width: 768px){
+   .main-content > p{
+      margin-top: 10px;
+   }
+   .team-members{
+     grid-template-columns: auto;
+   }
+   .card{
+     margin: 10px 0px;
+   }
+   .timeline-content .date{
+     position: static;
+   }
+   .timeline-content h2,
+   .timeline-content p{
+     overflow-wrap: break-word;
+   }
 }

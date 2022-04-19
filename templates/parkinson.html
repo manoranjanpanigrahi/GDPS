@@ -6,6 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="/static/css/parkinson.css">
    <link rel="stylesheet" href="/static/css/header.css">
+   <script src="https://kit.fontawesome.com/5626601018.js" crossorigin="anonymous"></script>
    <title>Parkinson Disease Prediction</title>
 </head>
 <body>
@@ -15,8 +16,11 @@
             <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019" target="__blank"> click here</a>
          </h3>
       </div>
-      <header>
-         <ul class="nav-bar">
+      <header id="header">
+        <button class="menu" id="menu">
+            <i class="fa-solid fa-bars"></i>
+         </button>
+         <ul class="nav-bar" id="nav-bar">
             <a href="index.html" class="home">Home</a>
             <a href="heart.html" class="heart">Heart</a>
             <a href="diabetes.html" class="diabetes">Diabetes</a>
@@ -41,7 +45,7 @@
               >
                 ?
               </p>
-                  <input type="text" name="MDVP:Fo(Hz)" required>
+                  <input type="number" name="MDVP:Fo(Hz)" required>
                </div>
                <div class="form-group MDVP:Fhi(Hz)">
                   <label for="MDVP:Fhi(Hz)">MDVP:Fhi(Hz)</label>
@@ -51,7 +55,7 @@
               >
                 ?
               </p>
-                  <input type="text" name="MDVP:Fhi(Hz)" required>
+                  <input type="number" name="MDVP:Fhi(Hz)" required>
                </div>
                <div class="form-group MDVP:Flo(Hz)">
                   <label for="MDVP:Flo(Hz)">MDVP:Flo(Hz)</label>
@@ -61,7 +65,7 @@
               >
                 ?
               </p>
-                  <input type="text" name="MDVP:Flo(Hz)" required>
+                  <input type="number" name="MDVP:Flo(Hz)" required>
                </div>
                <div class="form-group MDVP:Jitter(%)">
                   <label for="MDVP:Jitter(%)">MDVP:Jitter(%)</label>
@@ -71,7 +75,7 @@
               >
                 ?
               </p>
-                  <input type="text" name="MDVP:Jitter(%)" required>
+                  <input type="number" name="MDVP:Jitter(%)" required>
                </div>
                <div class="form-group MDVP:Jitter(Abs)">
                   <label for="MDVP:Jitter(Abs)">MDVP:Jitter(Abs)</label>
@@ -81,7 +85,7 @@
               >
                 ?
               </p>
-                  <input type="text" name="MDVP:Jitter(Abs)" required>
+                  <input type="number" name="MDVP:Jitter(Abs)" required>
                </div>
                <div class="form-group MDVP:RAP">
                   <label for="MDVP:RAP">MDVP:RAP</label>
@@ -91,11 +95,11 @@
               >
                 ?
               </p>
-                  <input type="text" name="MDVP:RAP" required>
+                  <input type="number" name="MDVP:RAP" required>
                </div>
                <div class="buttons">
-                  <button type="reset" class="reset-btn">Reset</button>
-                  <button type="button" class="next-btn">Next</button>
+                  <button type="reset" class="reset-btn btn">Reset</button>
+                  <button type="button" class="next-btn btn">Next</button>
                </div>
             </div>
             <div class="step step-2">
@@ -107,7 +111,7 @@
               >
                 ?
               </p>
-                  <input type="text" name="MDVP:PPQ" required>
+                  <input type="number" name="MDVP:PPQ" required>
                </div>
                <div class="form-group Jitter:DDP">
                   <label for="Jitter:DDP">Jitter:DDP</label>
@@ -117,7 +121,7 @@
               >
                 ?
               </p>
-                  <input type="text" name="Jitter:DDP" required>
+                  <input type="number" name="Jitter:DDP" required>
                </div>
                <div class="form-group MDVP:Shimmer">
                   <label for="MDVP:Shimmer">MDVP:Shimmer</label>
@@ -127,7 +131,7 @@
               >
                 ?
               </p>
-                  <input type="text" name="MDVP:Shimmer" required>
+                  <input type="number" name="MDVP:Shimmer" required>
                </div>
                <div class="form-group MDVP:Shimmer(dB)">
                   <label for="MDVP:Shimmer(dB)">MDVP:Shimmer(dB)</label>
@@ -137,7 +141,7 @@
               >
                 ?
               </p>
-                  <input type="text" name="MDVP:Shimmer(dB)" required>
+                  <input type="number" name="MDVP:Shimmer(dB)" required>
                </div>
                <div class="form-group Shimmer:APQ3">
                   <label for="Shimmer:APQ3">Shimmer:APQ3</label>
@@ -147,7 +151,7 @@
               >
                 ?
               </p>
-                  <input type="text" name="Shimmer:APQ3" required>
+                  <input type="number" name="Shimmer:APQ3" required>
                </div>
                <div class="form-group Shimmer:APQ5">
                   <label for="Shimmer:APQ5">Shimmer:APQ5</label>
@@ -157,12 +161,12 @@
               >
                 ?
               </p>
-                  <input type="text" name="Shimmer:APQ5" required>
+                  <input type="number" name="Shimmer:APQ5" required>
                </div>
                <div class="buttons">
-                  <button type="button" class="prev-btn">Previous</button>
-                  <button type="reset" class="reset-btn">Reset</button>
-                  <button type="button" class="next-btn">Next</button>
+                  <button type="button" class="prev-btn btn">Previous</button>
+                  <button type="reset" class="reset-btn btn">Reset</button>
+                  <button type="button" class="next-btn btn">Next</button>
                </div>
             </div>
             <div class="step step-3">
@@ -174,7 +178,7 @@
               >
                 ?
               </p>
-                  <input type="text" name="MDVP:APQ" required>
+                  <input type="number" name="MDVP:APQ" required>
                </div>
                <div class="form-group Shimmer:DDA">
                   <label for="age">Shimmer:DDA</label>
@@ -184,7 +188,7 @@
               >
                 ?
               </p>
-                  <input type="text" name="Shimmer:DDA" required>
+                  <input type="number" name="Shimmer:DDA" required>
                </div>
                <div class="form-group NHR">
                   <label for="NHR">NHR</label>
@@ -194,7 +198,7 @@
               >
                 ?
               </p>
-                  <input type="text" name="NHR" required>
+                  <input type="number" name="NHR" required>
                </div>
                <div class="form-group HNR">
                   <label for="age">HNR</label>
@@ -214,7 +218,7 @@
               >
                 ?
               </p>
-                  <input type="text" name="RPDE" required>
+                  <input type="number" name="RPDE" required>
                </div>
                <div class="form-group dfa">
                   <label for="age">DFA</label>
@@ -224,12 +228,12 @@
               >
                 ?
               </p>
-                  <input type="text" name="DFA" required>
+                  <input type="number" name="DFA" required>
                </div>
                <div class="buttons">
-                  <button type="button" class="prev-btn">Previous</button>
-                  <button type="reset" class="reset-btn">Reset</button>
-                  <button type="button" class="next-btn">Next</button>
+                  <button type="button" class="prev-btn btn">Previous</button>
+                  <button type="reset" class="reset-btn btn">Reset</button>
+                  <button type="button" class="next-btn btn">Next</button>
                </div>
             </div>
             <div class="step step-3">
@@ -241,7 +245,7 @@
               >
                 ?
               </p>
-                  <input type="text" name="spread1" required>
+                  <input type="number" name="spread1" required>
                </div>
                <div class="form-group spread2">
                   <label for="age">spread2</label>
@@ -251,7 +255,7 @@
               >
                 ?
               </p>
-                  <input type="text" name="spread2" required>
+                  <input type="number" name="spread2" required>
                </div>
                <div class="form-group d2">
                   <label for="dpf">D2</label>
@@ -261,7 +265,7 @@
               >
                 ?
               </p>
-                  <input type="text" name="D2" required>
+                  <input type="number" name="D2" required>
                </div>
                <div class="form-group ppe">
                   <label for="age">PPE</label>
@@ -271,17 +275,18 @@
               >
                 ?
               </p>
-                  <input type="text" name="PPE" required>
+                  <input type="number" name="PPE" required>
                </div>
                <div class="buttons">
-                  <button type="button" class="prev-btn">Previous</button>
-                  <button type="reset" class="reset-btn">Reset</button>
-                  <button type="submit" class="submit-btn">Submit</button>
+                  <button type="button" class="prev-btn btn">Previous</button>
+                  <button type="reset" class="reset-btn btn">Reset</button>
+                  <button type="submit" class="submit-btn btn">Submit</button>
                </div>
             </div>
          </form>
       </div>
    </section>
-   <script src="static\script.js"></script>
+   <script src="/static/menu.js"></script>
+    <script src="/static/script.js"></script>
 </body>
 </html>

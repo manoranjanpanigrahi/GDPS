@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/static/css/diabetes.css" />
     <link rel="stylesheet" href="/static/css/header.css" />
+    <script src="https://kit.fontawesome.com/5626601018.js" crossorigin="anonymous"></script>
     <title>Diabetes Prediction</title>
   </head>
   <body>
@@ -21,8 +22,11 @@
           >
         </h3>
       </div>
-      <header>
-        <ul class="nav-bar">
+      <header id="header">
+        <button class="menu" id="menu">
+            <i class="fa-solid fa-bars"></i>
+         </button>
+        <ul class="nav-bar" id="nav-bar">
           <a href="index.html" class="home">Home</a>
           <a href="heart.html" class="heart">Heart</a>
           <a href="diabetes.html" class="diabetes current">Diabetes</a>
@@ -49,7 +53,7 @@
               >
                 ?
               </p>
-              <input type="text" name="pregnencies" required />
+              <input type="number" name="pregnencies" required />
             </div>
             <div class="form-group glucose">
               <label for="glucose">glucose</label>
@@ -59,7 +63,7 @@
               >
                 ?
               </p>
-              <input type="text" name="glucose" required />
+              <input type="number" name="glucose" required />
             </div>
             <div class="form-group bloodpressure">
               <label
@@ -73,7 +77,7 @@
               >
                 ?
               </p>
-              <input type="text" name="bloodpressure" required />
+              <input type="number" name="bloodpressure" required />
             </div>
             <div class="form-group skinthickness">
               <label
@@ -87,11 +91,11 @@
               >
                 ?
               </p>
-              <input type="text" name="skinthickness" required />
+              <input type="number" name="skinthickness" required />
             </div>
             <div class="buttons">
-              <button type="reset" class="reset-btn">Reset</button>
-              <button type="button" class="next-btn">Next</button>
+              <button type="reset" class="reset-btn btn">Reset</button>
+              <button type="button" class="next-btn btn">Next</button>
             </div>
           </div>
           <div class="step step-2">
@@ -107,7 +111,7 @@
               >
                 ?
               </p>
-              <input type="text" name="insulin" required />
+              <input type="number" name="insulin" required />
             </div>
             <div class="form-group bmi">
               <label
@@ -120,7 +124,7 @@
               >
                 ?
               </p>
-              <input type="text" name="bmi" required />
+              <input type="number" name="bmi" required />
             </div>
             <div class="form-group dpf">
               <label
@@ -134,7 +138,7 @@
               >
                 ?
               </p>
-              <input type="text" name="dpf" required />
+              <input type="number" name="dpf" required />
             </div>
             <div class="form-group age">
               <label
@@ -148,17 +152,18 @@
               >
                 ?
               </p>
-              <input type="text" name="diabetesage" required />
+              <input type="number" name="diabetesage" required />
             </div>
             <div class="buttons">
-              <button type="button" class="prev-btn">Previous</button>
-              <button type="reset" class="reset-btn">Reset</button>
-              <button type="submit" class="submit-btn">Submit</button>
+              <button type="button" class="prev-btn btn">Previous</button>
+              <button type="reset" class="reset-btn btn">Reset</button>
+              <button type="submit" class="submit-btn btn">Submit</button>
             </div>
           </div>
         </form>
       </div>
     </section>
-    <script src="static\script.js"></script>
+    <script src="/static/menu.js"></script>
+    <script src="/static/script.js"></script>
   </body>
 </html>

@@ -7,7 +7,7 @@
    overflow-x: hidden;
 }
 body{
-   background-color: #c4fcefa2;
+   background-color: rgba(0, 255, 255, 0.4);
 }
 /************************************* PROBLEM STATEMENT ************************/
 .main-content{
@@ -24,11 +24,12 @@ p{
 h2{
    font-size: 1.85rem;
    text-align: center;
-   margin: 40px;
-   margin-bottom: 0px;
+   margin: 20px 0px;
+   text-align: center;
 }
 .projDoc{
-   margin-left: 48px;
+   /* margin-left: 48px; */
+   text-align: center;
 }
 /******************************* TECHNOLOGIES USED ********************************/
 .technologies{
@@ -58,4 +59,16 @@ h2{
    display: flex;
    justify-content: center;
    margin: 20px 0px;
+}
+
+/*********************************************** MOBILE RESPONSIVE *************************************************/
+
+@media only screen and (max-width: 768px){
+   .main-content > p{
+      margin-top: 10px;
+   }
+   .projDoc,
+   .documentation{
+      display: none;
+   }
 }

@@ -6,6 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="/static/css/header.css">
    <link rel="stylesheet" href="/static/css/diabetes.css">
+   <script src="https://kit.fontawesome.com/5626601018.js" crossorigin="anonymous"></script>
    <title>Diabetes Prediction Result</title>
 </head>
 <body>
@@ -15,8 +16,11 @@
             <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019" target="__blank"> click here</a>
          </h3>
       </div>
-      <header>
-         <ul class="nav-bar">
+      <header id="header">
+         <button class="menu" id="menu">
+            <i class="fa-solid fa-bars"></i>
+         </button>
+         <ul class="nav-bar" id="nav-bar">
             <a href="index.html" class="home">Home</a>
             <a href="heart.html" class="heart">Heart</a>
             <a href="diabetes.html" class="diabetes current">Diabetes</a>
@@ -32,7 +36,8 @@
       </div>
    </div>
    <div class="back-button">
-         <a href="diabetes.html" class="back"><button>Back to Diabetes Prediction Form</button></a>
+         <a href="diabetes.html" class="back"><button class="btn">Back to Diabetes Prediction Form</button></a>
       </div>
+      <script src="/static/menu.js" defer></script>
 </body>
 </html>
